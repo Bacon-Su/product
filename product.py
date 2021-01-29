@@ -11,3 +11,6 @@ print(product)
 
 print(product[0][0])#product[(大清單的0)p[(小清單的0)0]p[1], p[0]p[1]]
 #印出第一個商品的名字
+
+for p in product:
+	print(p)
