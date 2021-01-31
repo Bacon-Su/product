@@ -4,8 +4,9 @@ products = []
 
 with open('products.csv', 'r') as f:
 	for line in f:
-		name, price = line.strip().split(',')#去除換行再用split以逗點當切割標準
-		#print(name, price)#split切完後會印出清單
+		if '商品,價格' in line:
+			continue#不執行9跟10,不會印出商品價格,continue(跳到下一回),break(中斷迴圈)
+		name, price = line.strip().split(',')#去除換行split逗點當切割標準
 		products.append([name, price])
 
 print(products)
