@@ -1,4 +1,14 @@
+#讀取檔案
+
 products = []
+
+with open('products.csv', 'r') as f:
+	for line in f:
+		name, price = line.strip().split(',')#去除換行再用split以逗點當切割標準
+		#print(name, price)#split切完後會印出清單
+		products.append([name, price])
+
+print(products)
 
 print('輸入q退出')
 while True:
